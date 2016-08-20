@@ -12,12 +12,25 @@ class Post(models.Model):
     published_date = models.DateTimeField(
             blank=True, null=True)
 
+   
+    r01c4=models.CharField(default='', max_length=99)
+    r01c6=models.CharField(default='', max_length=99)
+    r01c8=models.CharField(default='', max_length=99)
+   
+   
     #
     r03c3=models.CharField(default='', max_length=99)
     r03c4=models.CharField(default='', max_length=99)
     r03c5=models.CharField(default='', max_length=99)
     r03c6=models.CharField(default='', max_length=99)
     r03c7=models.CharField(default='', max_length=99)
+
+    r04c3=models.CharField(default='', max_length=99)
+    r04c4=models.CharField(default='', max_length=99)
+    r04c5=models.CharField(default='', max_length=99)
+    r04c6=models.CharField(default='', max_length=99)
+    r04c7=models.CharField(default='', max_length=99)
+
           
     def publish(self):
         self.published_date = timezone.now()

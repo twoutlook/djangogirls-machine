@@ -1,21 +1,38 @@
+{% extends 'blog/base.html' %} {% block content %}
+<div class="post">
+    {% if post.published_date %}
+    <div class="date">
+        {{ post.published_date }}
+    </div>
+    {% endif %} {% if user.is_authenticated %}
+    <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a> {% endif %}
+    <h1>{{ post.title }}</h1>
+    <!--<h1>{{ post.brief }}</h1>-->
+    <table>
+        <tr>
+            <td>幾號機</td>
+            <td> {{ post.title }}</td>
+            <td>噸位</td>
+            <td> {{ post.r01c4 }}</td>
+            <td>人員</td>
+            <td> {{ post.r01c6 }}</td>
+            <td>日期</td>
+            <td> {{ post.r01c8 }}</td>
+        </tr>
+        <tr>
 
 
-{% extends 'blog/base.html' %}
+            <th>部位</th>
+            <th>組成</th>
+            <th>零件</th>
+            <th>進度一</th>
+            <th>進度二</th>
+            <th>進度三</th>
+            <th colspan='2'>備註說明</th>
 
-{% block content %}
-    <div class="post">
-        {% if post.published_date %}
-            <div class="date">
-                {{ post.published_date }}
-            </div>
-        {% endif %}
-{% if user.is_authenticated %}
-     <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
-{% endif %}        
-        <h1>{{ post.title }}</h1>
-        <!--<h1>{{ post.brief }}</h1>-->
-        <table>
-        
+
+        </tr>
+
         <tr>
             <td> 結構 </td>
             <td> 格林柱 </td>
@@ -23,9 +40,18 @@
             <td> {{ post.r03c4 }}</td>
             <td> {{ post.r03c5 }}</td>
             <td> {{ post.r03c6 }}</td>
-            <td> {{ post.r03c7 }}</td>
-            
+            <td  colspan='2'> {{ post.r03c7 }}</td>
         </tr>
-        </table>
-    </div>
+        <tr>
+            <td> </td>
+            <td> 機架底座 </td>
+            <td> {{ post.r04c3 }}</td>
+            <td> {{ post.r04c4 }}</td>
+            <td> {{ post.r04c5 }}</td>
+            <td> {{ post.r04c6 }}</td>
+            <td  colspan='2'> {{ post.r04c7 }}</td>
+        </tr>
+
+    </table>
+</div>
 {% endblock %}

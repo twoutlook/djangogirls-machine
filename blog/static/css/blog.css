@@ -28,11 +28,13 @@ border-collapse:
 collapse; border-spacing: 0;
 }
 
+
 td, th { border: 1px solid #CCC; height: 30px; } /* Make cells a bit taller */
 
 th {
 background: #F3F3F3; /* Light grey background */
 font-weight: bold; /* Make sure they're bold */
+text-align: center; /* Center our text */
 }
 
 td {
