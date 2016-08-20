@@ -4,28 +4,35 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    {% for post in posts %}
         <div class="post">
+    <table>
+        
+    {% for post in posts %}
+    <tr>
+    <td>
             <div class="date">
                 {{ post.published_date }}
             </div>
             <!--<h1><a href="">{{ post.title }}</a></h1>-->
             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
             <h2>{{ post.brief }}</h2>
-        <table>
+        
+    </td>    
+    </tr>
         
         <tr>
             <td> 結構 </td>
             <td> 格林柱 </td>
-            <td> {{ form.r03c3 }}</td>
-            <td> {{ form.r03c4 }}</td>
-            <td> {{ form.r03c5 }}</td>
-            <td> {{ form.r03c6 }}</td>
-            <td> {{ form.r03c7 }}</td>
+            <td> {{ post.r03c3 }}</td>
+            <td> {{ post.r03c4 }}</td>
+            <td> {{ post.r03c5 }}</td>
+            <td> {{ post.r03c6 }}</td>
+            <td> {{ post.r03c7 }}</td>
             
         </tr>
-        </table>
        
-        </div>
     {% endfor %}
+        </table>
+        </div>
+
 {% endblock content %}
