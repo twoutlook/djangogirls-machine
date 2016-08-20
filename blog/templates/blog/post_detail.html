@@ -8,7 +8,7 @@
     <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a> {% endif %}
     <h1>{{ post.title }}</h1>
     <!--<h1>{{ post.brief }}</h1>-->
-    <table>
+    <table >
         <tr>
             <td>幾號機</td>
             <td> {{ post.title }}</td>
@@ -40,7 +40,7 @@
             <td> {{ post.r03c4 }}</td>
             <td> {{ post.r03c5 }}</td>
             <td> {{ post.r03c6 }}</td>
-            <td  colspan='2'> {{ post.r03c7 }}</td>
+            <td colspan='2'> {{ post.r03c7 }}</td>
         </tr>
         <tr>
             <td> </td>
@@ -49,7 +49,12 @@
             <td> {{ post.r04c4 }}</td>
             <td> {{ post.r04c5 }}</td>
             <td> {{ post.r04c6 }}</td>
-            <td  colspan='2'> {{ post.r04c7 }}</td>
+
+            <td colspan='2'> {{ post.r04c7 }}</td>
+
+            <!--BY MARK, 2016-08-20, TO FIX LOWER RIGHT CORNER -->
+            <td style="border:0px"></td>
+
         </tr>
 
     </table>

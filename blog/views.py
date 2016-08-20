@@ -19,7 +19,11 @@ def post_new(request):
             post.author = request.user
             post.published_date = timezone.now()
             post.save()
+            # print("post.pk="+str(post.pk)
             return redirect('post_detail', pk=post.pk)
+        else:
+            print("form is not valid")
+            
     else:
         form = PostForm()
     return render(request, 'blog/post_edit.html', {'form': form})
