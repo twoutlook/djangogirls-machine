@@ -14,6 +14,18 @@
 {% endif %}        
         <h1>{{ post.title }}</h1>
         <h1>{{ post.brief }}</h1>
-        <p>{{ post.text|linebreaksbr }}<hr></p>
+        <table>
+        
+        <tr>
+            <td> 結構 </td>
+            <td> 格林柱 </td>
+            <td> {{ post.r03c3 }}</td>
+            <td> {{ post.r03c4 }}</td>
+            <td> {{ post.r03c5 }}</td>
+            <td> {{ post.r03c6 }}</td>
+            <td> {{ post.r03c7 }}</td>
+            
+        </tr>
+        </table>
     </div>
 {% endblock %}
