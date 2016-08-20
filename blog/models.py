@@ -6,7 +6,7 @@ class Post(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
     # brief = models.CharField(default='', max_length=200)
-    text = models.CharField(default='', max_length=200)
+    # text = models.CharField(default='', max_length=200)
     created_date = models.DateTimeField(
             default=timezone.now)
     published_date = models.DateTimeField(
